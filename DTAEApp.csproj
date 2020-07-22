@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57494EE7-E7EC-4597-AD58-D0C1923D9EA7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BaggingRandomMinerApp</RootNamespace>
+    <AssemblyName>BaggingRandomMinerApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="core\AUCCalculatorExtensions.cs" />
+    <Compile Include="core\BaseSampler.cs" />
+    <Compile Include="core\BaseSerializer.cs" />
+    <Compile Include="core\BaseSplitIteratorProvider.cs" />
+    <Compile Include="core\ChildrenInstanceCreator.cs" />
+    <Compile Include="core\ConfusionMatrix.cs" />
+    <Compile Include="core\CsvLoader.cs" />
+    <Compile Include="core\CutPointSelector.cs" />
+    <Compile Include="core\DatasetInformation.cs" />
+    <Compile Include="core\DecisionTree.cs" />
+    <Compile Include="core\DecisionTreeBuilder.cs" />
+    <Compile Include="core\DecisionTreeClassifier.cs" />
+    <Compile Include="core\DecisionTreeNode.cs" />
+    <Compile Include="core\DecisionTreePrunner.cs" />
+    <Compile Include="core\DTAE.cs" />
+    <Compile Include="core\Feature.cs" />
+    <Compile Include="core\GenericRandomSampler.cs" />
+    <Compile Include="core\IChildSelector.cs" />
+    <Compile Include="core\IDecisionTreeNode.cs" />
+    <Compile Include="core\IDistributionEvaluator.cs" />
+    <Compile Include="core\IDistributionTester.cs" />
+    <Compile Include="core\Instance.cs" />
+    <Compile Include="core\InstanceModel.cs" />
+    <Compile Include="core\InstanceModelLinq.cs" />
+    <Compile Include="core\InstanceSample.cs" />
+    <Compile Include="core\InstanceVector.cs" />
+    <Compile Include="core\IPruneTester.cs" />
+    <Compile Include="core\ISampler.cs" />
+    <Compile Include="core\ISplitIterator.cs" />
+    <Compile Include="core\ISplitIteratorProvider.cs" />
+    <Compile Include="core\ISupervisedClassifier.cs" />
+    <Compile Include="core\IVector.cs" />
+    <Compile Include="core\KFoldStratifiedCrossValidationSampler.cs" />
+    <Compile Include="core\LinqExtensions.cs" />
+    <Compile Include="core\MultipleValuesSelector.cs" />
+    <Compile Include="core\ObjectPropertyHelper.cs" />
+    <Compile Include="core\OrderedFeatureSplitIterator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="core\PureNodeStopCondition.cs" />
+    <Compile Include="core\RandomGenerator.cs" />
+    <Compile Include="core\SelectorContext.cs" />
+    <Compile Include="core\SingleFeatureSelector.cs" />
+    <Compile Include="core\StandardSplitIteratorProvider.cs" />
+    <Compile Include="core\Twoing.cs" />
+    <Compile Include="core\ValueAndComplementSelector.cs" />
+    <Compile Include="core\ValueAndComplementSplitIterator.cs" />
+    <Compile Include="core\WiningSplitSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
