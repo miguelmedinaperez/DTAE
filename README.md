@@ -1,5 +1,5 @@
-# Bagging-RandomMiner
-A C# implementations of the algorithm DTAE [1].
+# Decision tree-based autoencoder
+A C# implementations of the algorithm DTAE [1] for categorical data.
 
 # An example of using this implementation
 In the file Program.cs, specify the paths to the training (1tra.csv) and testing (1tst.csv) files that appear in this repository.
