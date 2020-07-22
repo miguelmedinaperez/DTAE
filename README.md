@@ -8,4 +8,4 @@ In the file Program.cs, specify the paths to the training (1tra.csv) and testing
 I implemented DTAE on top of an architecture created by Dr. Milton García-Borroto and Dr. Octavio Loyola-González.
 
 # References
-[1] D. L. Aguilar, M. A. Medina-Pérez, O. Loyola-González, K.-K. Raymond Choo, "Towards an interpretable autoencoder: A decision tree-based autoencoder and its application in anomaly detection," <i>IEEE Transactions on Dependable and Secure Computing</i>, (<i>Under Review</i>).
+[1] D. L. Aguilar, M. A. Medina-Pérez, O. Loyola-González, K.-K. Raymond Choo, E. Bucheli-Susarrey, "Towards an interpretable autoencoder: A decision tree-based autoencoder and its application in anomaly detection," <i>IEEE Transactions on Dependable and Secure Computing</i>, (<i>Under Review</i>).
