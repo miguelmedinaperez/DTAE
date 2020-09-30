@@ -26,9 +26,10 @@ namespace PRFramework.Core.SupervisedClassifiers.Evaluators.Measures
 
         public static double ComputeMultiClassAUC(this int[,] confusionMatrix)
         {
-            var eval = new BasicEvaluation();
+            double aucSum = 0;
             for (int i = 0; i < confusionMatrix.GetLength(0); i++)
             {
+                var eval = new BasicEvaluation();
                 eval.TP += confusionMatrix[i, i];
                 for (int j = 0; j < confusionMatrix.GetLength(0); j++)
                     if (i != j)
@@ -39,8 +40,9 @@ namespace PRFramework.Core.SupervisedClassifiers.Evaluators.Measures
                         eval.TN += confusionMatrix[j, j];
                     }
 
+                aucSum += ComputeTwoClassAUC(eval);
             }
-            return ComputeTwoClassAUC(eval);
+            return aucSum / confusionMatrix.GetLength(0);
         }
 
         public static double ComputeMultiClassKappa(this int[,] confusionMatrix)
