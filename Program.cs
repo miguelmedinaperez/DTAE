@@ -3,7 +3,7 @@ using PRFramework.Core.IO;
 using PRFramework.Core.SupervisedClassifiers.EmergingPatterns.Classifiers;
 using System;
 
-namespace BaggingRandomMinerApp
+namespace DTAEApp
 {
     class Program
     {
